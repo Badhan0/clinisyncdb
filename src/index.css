@@ -1,0 +1,83 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 195 75% 97%;
+    --foreground: 200 50% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 200 98% 40%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 200 98% 55%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 195 75% 60%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 195 75% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    scroll-behavior: smooth;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(0,136,204,0.05) 0%, rgba(72,202,228,0.15) 100%);
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-clinic-600 to-clinic-400 bg-clip-text text-transparent;
+  }
+
+  .card-shadow {
+    box-shadow: 0 10px 30px -15px rgba(0, 136, 204, 0.15);
+  }
+
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px -15px rgba(0, 136, 204, 0.2);
+  }
+
+  .blob {
+    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+  }
+
+  .parallax-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+  }
+
+  .parallax-layer {
+    transform-style: preserve-3d;
+  }
+}
